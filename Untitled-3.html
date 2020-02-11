@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  
+}
+#animate2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  right:0px;
+  
+
+}
+
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+
+<div id ="container">
+  <img src="https://dok7xy59qfw9h.cloudfront.net/683/009/298/-239996990-1t8kti4-bl436kk79lk8kcf/original/avatar.jpg" id ="animate"></img>
+  <img src="https://dok7xy59qfw9h.cloudfront.net/683/009/298/-239996990-1t8kti4-bl436kk79lk8kcf/original/avatar.jpg" id ="animate2"></img>
+
+  
+  
+  
+</div>
+
+<script>
+function myMove() {
+
+  
+  var elem = document.getElementById("animate");  
+  var elem2 = document.getElementById("animate2");
+ 
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 175) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px";
+      }
+   }      
+  
+  var id2 = setInterval(frame2, 5);
+  function frame2() {
+    if (pos == 175) {
+      clearInterval(id2);
+    } else {
+      pos++; 
+      elem2.style.bottom = pos + "px"; 
+      elem2.style.right = pos + "px"; 
+      
+    }
+    
+ 
+  
+}
+}
+</script>
+
+</body>
+</html>
